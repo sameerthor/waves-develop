@@ -1,0 +1,32 @@
+//
+// _fleet-management.scss
+//
+
+// Override sidebar styling for fleet management pages
+html[data-menu-color="dark"] {
+     .main-nav {
+          .navbar-nav {
+               .nav-item {
+                    .nav-link {
+                         &.active {
+                              background-color: rgba(255, 255, 255, 0.18);
+                              color: $white;
+                              font-weight: 600;
+                              position: relative;
+                              
+                              &::before {
+                                   content: '';
+                                   position: absolute;
+                                   left: 0;
+                                   top: 0;
+                                   bottom: 0;
+                                   width: 6px;
+                                   background: $white;
+                                   border-radius: 0 4px 4px 0;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}

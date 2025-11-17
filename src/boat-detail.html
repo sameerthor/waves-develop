@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     @@include("partials/title-meta.html", {"sub-title": "Boat Details"})
+     @@include("partials/head-css.html")
+</head>
+
+<body data-menu-color="dark">
+     <div class="wrapper">
+          @@include("partials/main-nav-fleet.html")
+          @@include("partials/topbar.html")
+
+          <div class="page-content" style="background: #F3F4F6;">
+               <div class="container-fluid">
+                    
+                    <!-- Back Navigation -->
+                    <div class="row mb-3">
+                         <div class="col-12">
+                              <a href="fleet-management.html" class="d-inline-flex align-items-center gap-2 text-decoration-none" style="font-size: 20px; font-weight: 600; color: #212529;">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z" fill="#212529"/>
+                                   </svg>
+                                   Ocean Explorer
+                              </a>
+                         </div>
+                    </div>
+
+                    <!-- Main Content Card -->
+                    <div class="row">
+                         <div class="col-12">
+                              <div class="card shadow-sm">
+                                   <div class="card-body p-0">
+                                        
+                                        <!-- Top Section: Image, Info, Button -->
+                                        <div class="row g-0 p-3">
+                                             <!-- Boat Image -->
+                                             <div class="col-lg-4">
+                                                  <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&h=600&fit=crop" 
+                                                       alt="Ocean Explorer" 
+                                                       class="img-fluid rounded"
+                                                       style="max-height: 327px; width: 100%; object-fit: cover;">
+                                             </div>
+                                             
+                                             <!-- Boat Info -->
+                                             <div class="col-lg-5 ps-lg-4 mt-3 mt-lg-0">
+                                                  <div class="d-flex align-items-center gap-2 mb-2">
+                                                       <h4 class="mb-0" style="font-size: 20px; font-weight: 700; color: #212529;">Ocean Explorer</h4>
+                                                       <span class="badge bg-success" style="padding: 3px 6px; font-size: 13px; font-weight: 600;">Active</span>
+                                                  </div>
+                                                  <p class="text-muted mb-4" style="font-size: 14px;">Yacht • Serial: B001</p>
+                                                  
+                                                  <div class="mb-3">
+                                                       <h6 class="mb-2" style="font-size: 15px; font-weight: 500; color: #212529;">Features</h6>
+                                                       <div class="d-flex flex-wrap gap-2">
+                                                            <span class="badge bg-light text-muted border" style="padding: 6px 11px; font-size: 13px; font-weight: 500;">12 Persons</span>
+                                                            <span class="badge bg-light text-muted border" style="padding: 6px 11px; font-size: 13px; font-weight: 500;">Music</span>
+                                                            <span class="badge bg-light text-muted border" style="padding: 6px 11px; font-size: 13px; font-weight: 500;">Assets</span>
+                                                            <span class="badge bg-light text-muted border" style="padding: 6px 11px; font-size: 13px; font-weight: 500;">GPS</span>
+                                                            <span class="badge bg-light text-muted border" style="padding: 6px 11px; font-size: 13px; font-weight: 500;">Fishing</span>
+                                                       </div>
+                                                  </div>
+                                                  
+                                                  <div>
+                                                       <h5 class="mb-0" style="font-size: 20px; font-weight: 700; color: #212529;">$899.00</h5>
+                                                       <p class="text-muted mb-0" style="font-size: 14px;">Base Charges</p>
+                                                  </div>
+                                             </div>
+                                             
+                                             <!-- Update Button -->
+                                             <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
+                                                  <button class="btn btn-outline-primary" style="padding: 16px; font-size: 16px; font-weight: 500;">
+                                                       Update Boat Details
+                                                  </button>
+                                             </div>
+                                        </div>
+
+                                        <!-- Tabs Navigation -->
+                                        <div class="border-bottom">
+                                             <ul class="nav nav-tabs border-0 px-3" id="boatDetailsTabs" role="tablist" style="gap: 53px;">
+                                                  <li class="nav-item" role="presentation">
+                                                       <button class="nav-link active border-0 pb-3 position-relative" 
+                                                               id="overview-tab" 
+                                                               data-bs-toggle="tab" 
+                                                               data-bs-target="#overview" 
+                                                               type="button" 
+                                                               role="tab"
+                                                               style="font-size: 16px; font-weight: 600; color: #212529; background: none;">
+                                                            Overview
+                                                       </button>
+                                                  </li>
+                                                  <li class="nav-item" role="presentation">
+                                                       <button class="nav-link border-0 pb-3 position-relative" 
+                                                               id="bookings-tab" 
+                                                               data-bs-toggle="tab" 
+                                                               data-bs-target="#bookings" 
+                                                               type="button" 
+                                                               role="tab"
+                                                               style="font-size: 16px; font-weight: 600; color: #212529; background: none;">
+                                                            Bookings
+                                                       </button>
+                                                  </li>
+                                                  <li class="nav-item" role="presentation">
+                                                       <button class="nav-link border-0 pb-3 position-relative"
+                                                               id="maintenance-tab"
+                                                               data-bs-toggle="tab"
+                                                               data-bs-target="#maintenance"
+                                                               type="button"
+                                                               role="tab"
+                                                               style="font-size: 16px; font-weight: 600; color: #212529; background: none;">
+                                                            Maintenance
+                                                       </button>
+                                                  </li>
+                                                  <li class="nav-item" role="presentation">
+                                                       <button class="nav-link border-0 pb-3 position-relative"
+                                                               id="assets-tab"
+                                                               data-bs-toggle="tab"
+                                                               data-bs-target="#assets"
+                                                               type="button"
+                                                               role="tab"
+                                                               style="font-size: 16px; font-weight: 600; color: #212529; background: none;">
+                                                            Assets
+                                                       </button>
+                                                  </li>
+                                                  <li class="nav-item" role="presentation">
+                                                       <button class="nav-link border-0 pb-3 position-relative"
+                                                               id="documents-tab"
+                                                               data-bs-toggle="tab"
+                                                               data-bs-target="#documents"
+                                                               type="button"
+                                                               role="tab"
+                                                               style="font-size: 16px; font-weight: 600; color: #212529; background: none;">
+                                                            Documents
+                                                       </button>
+                                                  </li>
+                                                  <li class="nav-item" role="presentation">
+                                                       <button class="nav-link border-0 pb-3 position-relative"
+                                                               id="pricing-tab"
+                                                               data-bs-toggle="tab"
+                                                               data-bs-target="#pricing"
+                                                               type="button"
+                                                               role="tab"
+                                                               style="font-size: 16px; font-weight: 600; color: #212529; background: none;">
+                                                            Pricing
+                                                       </button>
+                                                  </li>
+                                             </ul>
+                                        </div>
+
+                                        <!-- Tab Content -->
+                                        <div class="tab-content p-3" id="boatDetailsTabContent">
+                                             
+                                             <!-- Overview Tab -->
+                                             <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                                  <div class="row g-4">
+                                                       <!-- Boat Specifications -->
+                                                       <div class="col-lg-6">
+                                                            <div class="d-flex align-items-center gap-2 mb-3">
+                                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M2 11.9998C2 11.1353 2.1097 10.2964 2.31595 9.49631C3.40622 9.55283 4.48848 9.01015 5.0718 7.99982C5.65467 6.99025 5.58406 5.78271 4.99121 4.86701C6.18354 3.69529 7.66832 2.82022 9.32603 2.36133C9.8222 3.33385 10.8333 3.99982 12 3.99982C13.1667 3.99982 14.1778 3.33385 14.674 2.36133C16.3317 2.82022 17.8165 3.69529 19.0088 4.86701C18.4159 5.78271 18.3453 6.99025 18.9282 7.99982C19.5115 9.01015 20.5938 9.55283 21.6841 9.49631C21.8903 10.2964 22 11.1353 22 11.9998C22 12.8643 21.8903 13.7032 21.6841 14.5033C20.5938 14.4468 19.5115 14.9895 18.9282 15.9998C18.3453 17.0094 18.4159 18.2169 19.0088 19.1326C17.8165 20.3043 16.3317 21.1794 14.674 21.6383C14.1778 20.6658 13.1667 19.9998 12 19.9998C10.8333 19.9998 9.8222 20.6658 9.32603 21.6383C7.66832 21.1794 6.18354 20.3043 4.99121 19.1326C5.58406 18.2169 5.65467 17.0094 5.0718 15.9998C4.48848 14.9895 3.40622 14.4468 2.31595 14.5033C2.1097 13.7032 2 12.8643 2 11.9998ZM6.80385 14.9998C7.43395 16.0912 7.61458 17.3459 7.36818 18.5236C7.77597 18.8138 8.21005 19.0652 8.66489 19.2741C9.56176 18.4712 10.7392 17.9998 12 17.9998C13.2608 17.9998 14.4382 18.4712 15.3351 19.2741C15.7899 19.0652 16.224 18.8138 16.6318 18.5236C16.3854 17.3459 16.566 16.0912 17.1962 14.9998C17.8262 13.9085 18.8225 13.1248 19.9655 12.7493C19.9884 12.5015 20 12.2516 20 11.9998C20 11.7481 19.9884 11.4981 19.9655 11.2504C18.8225 10.8749 17.8262 10.0912 17.1962 8.99982C16.566 7.90845 16.3854 6.65378 16.6318 5.47605C16.224 5.18588 15.7899 4.93447 15.3351 4.72552C14.4382 5.52844 13.2608 5.99982 12 5.99982C10.7392 5.99982 9.56176 5.52844 8.66489 4.72552C8.21005 4.93447 7.77597 5.18588 7.36818 5.47605C7.61458 6.65378 7.43395 7.90845 6.80385 8.99982C6.17376 10.0912 5.17754 10.8749 4.03451 11.2504C4.01157 11.4981 4 11.7481 4 11.9998C4 12.2516 4.01157 12.5015 4.03451 12.7493C5.17754 13.1248 6.17376 13.9085 6.80385 14.9998ZM12 14.9998C10.3431 14.9998 9 13.6567 9 11.9998C9 10.343 10.3431 8.99982 12 8.99982C13.6569 8.99982 15 10.343 15 11.9998C15 13.6567 13.6569 14.9998 12 14.9998ZM12 12.9998C12.5523 12.9998 13 12.5521 13 11.9998C13 11.4475 12.5523 10.9998 12 10.9998C11.4477 10.9998 11 11.4475 11 11.9998C11 12.5521 11.4477 12.9998 12 12.9998Z" fill="#212529"/>
+                                                                 </svg>
+                                                                 <h5 class="mb-0" style="font-size: 20px; font-weight: 500; color: #212529;">Boat Specifications</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card border">
+                                                                 <div class="card-body p-4">
+                                                                      <div class="row g-4">
+                                                                           <div class="col-md-6">
+                                                                                <div class="mb-4">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Engine</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">Twin 350HP Diesel</div>
+                                                                                </div>
+                                                                                <div class="mb-4">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Registration</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">FL1234BC</div>
+                                                                                </div>
+                                                                                <div class="mb-4">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Year</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">Twin 350HP Diesel</div>
+                                                                                </div>
+                                                                                <div class="mb-4">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Capacity</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">Twin 350HP Diesel</div>
+                                                                                </div>
+                                                                                <div class="mb-0">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Engine</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">Twin 350HP Diesel</div>
+                                                                                </div>
+                                                                           </div>
+                                                                           <div class="col-md-6">
+                                                                                <div class="mb-4">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Hull/HIN</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">ABC123456789</div>
+                                                                                </div>
+                                                                                <div class="mb-4">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Model</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">Twin 350HP Diesel</div>
+                                                                                </div>
+                                                                                <div class="mb-4">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Length</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">Twin 350HP Diesel</div>
+                                                                                </div>
+                                                                                <div class="mb-4">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Location</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">Twin 350HP Diesel</div>
+                                                                                </div>
+                                                                                <div class="mb-0">
+                                                                                     <div class="text-muted mb-1" style="font-size: 14px;">Engine</div>
+                                                                                     <div style="font-size: 16px; font-weight: 500; color: #212529;">Twin 350HP Diesel</div>
+                                                                                </div>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+
+                                                       <!-- Current Pricing -->
+                                                       <div class="col-lg-6">
+                                                            <div class="d-flex align-items-center gap-2 mb-3">
+                                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M12.0049 22.0028C6.48204 22.0028 2.00488 17.5257 2.00488 12.0028C2.00488 6.47996 6.48204 2.00281 12.0049 2.00281C17.5277 2.00281 22.0049 6.47996 22.0049 12.0028C22.0049 17.5257 17.5277 22.0028 12.0049 22.0028ZM12.0049 20.0028C16.4232 20.0028 20.0049 16.4211 20.0049 12.0028C20.0049 7.58453 16.4232 4.00281 12.0049 4.00281C7.5866 4.00281 4.00488 7.58453 4.00488 12.0028C4.00488 16.4211 7.5866 20.0028 12.0049 20.0028ZM8.50488 14.0028H14.0049C14.281 14.0028 14.5049 13.779 14.5049 13.5028C14.5049 13.2267 14.281 13.0028 14.0049 13.0028H10.0049C8.62417 13.0028 7.50488 11.8836 7.50488 10.5028C7.50488 9.12209 8.62417 8.00281 10.0049 8.00281H11.0049V6.00281H13.0049V8.00281H15.5049V10.0028H10.0049C9.72874 10.0028 9.50488 10.2267 9.50488 10.5028C9.50488 10.779 9.72874 11.0028 10.0049 11.0028H14.0049C15.3856 11.0028 16.5049 12.1221 16.5049 13.5028C16.5049 14.8836 15.3856 16.0028 14.0049 16.0028H13.0049V18.0028H11.0049V16.0028H8.50488V14.0028Z" fill="#212529"/>
+                                                                 </svg>
+                                                                 <h5 class="mb-0" style="font-size: 20px; font-weight: 500; color: #212529;">Current Pricing</h5>
+                                                            </div>
+                                                            
+                                                            <div class="card border">
+                                                                 <div class="card-body p-4">
+                                                                      <div class="mb-4">
+                                                                           <div class="text-muted mb-1" style="font-size: 14px;">Hourly Rate</div>
+                                                                           <div style="font-size: 16px; font-weight: 500; color: #212529;">Twin 350HP Diesel</div>
+                                                                      </div>
+                                                                      <div class="mb-0">
+                                                                           <div class="text-muted mb-1" style="font-size: 14px;">Daily Rate</div>
+                                                                           <div style="font-size: 16px; font-weight: 500; color: #212529;">FL1234BC</div>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <!-- Bookings Tab -->
+                                             <div class="tab-pane fade" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+                                                  
+                                                  <!-- Upcoming Bookings -->
+                                                  <div class="mb-4">
+                                                       <div class="d-flex justify-content-between align-items-center mb-3">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M7 3V1H9V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V9H20V5H17V7H15V5H9V7H7V5H4V19H10V21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7ZM17 12C14.7909 12 13 13.7909 13 16C13 18.2091 14.7909 20 17 20C19.2091 20 21 18.2091 21 16C21 13.7909 19.2091 12 17 12ZM11 16C11 12.6863 13.6863 10 17 10C20.3137 10 23 12.6863 23 16C23 19.3137 20.3137 22 17 22C13.6863 22 11 19.3137 11 16ZM16 13V16.4142L18.2929 18.7071L19.7071 17.2929L18 15.5858V13H16Z" fill="#212529"/>
+                                                                 </svg>
+                                                                 <h5 class="mb-0" style="font-size: 20px; font-weight: 500; color: #212529;">Upcoming Bookings</h5>
+                                                            </div>
+                                                            <div class="d-flex gap-2">
+                                                                 <button id="listViewBtn" class="btn btn-primary btn-sm" style="padding: 4px 8px; font-size: 13px; font-weight: 500;">List View</button>
+                                                                 <button id="calendarViewBtn" class="btn btn-outline-secondary btn-sm" style="padding: 4px 8px; font-size: 13px; font-weight: 500;">Calendar</button>
+                                                            </div>
+                                                       </div>
+
+                                                       <div id="listViewContainer" class="card border">
+                                                            <div class="table-responsive">
+                                                                 <table class="table table-hover mb-0">
+                                                                      <thead>
+                                                                           <tr style="border-bottom: 1px solid #EAEDF1;">
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Invoice #</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Customer</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Date & Time</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Price</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Status</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Actions</th>
+                                                                           </tr>
+                                                                      </thead>
+                                                                      <tbody>
+                                                                           <tr style="border-bottom: 1px solid #EAEDF1;">
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">INV-2045</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Michael Johnson</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Sept 20, 2025 – 2 PM</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">$1,200</td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <span class="badge bg-success" style="padding: 4px 8px; font-size: 13px; font-weight: 600;">Confirmed</span>
+                                                                                </td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View Details</a>
+                                                                                </td>
+                                                                           </tr>
+                                                                           <tr style="border-bottom: 1px solid #EAEDF1;">
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">INV-2051</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Emily Carter</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Sept 25, 2025 – 10 AM</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">$450</td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <span class="badge" style="padding: 4px 8px; font-size: 13px; font-weight: 600; background: #FFDA44; color: #FFF;">Pending</span>
+                                                                                </td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View Details</a>
+                                                                                </td>
+                                                                           </tr>
+                                                                      </tbody>
+                                                                 </table>
+                                                            </div>
+                                                       </div>
+
+                                                       <!-- Calendar View -->
+                                                       <div id="calendarViewContainer" class="card border" style="display: none;">
+                                                            <div class="card-body p-4">
+                                                                 <!-- Calendar Header -->
+                                                                 <div class="d-flex justify-content-between align-items-center mb-4">
+                                                                      <button id="prevMonth" class="btn btn-sm btn-outline-secondary">
+                                                                           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z" fill="currentColor"/>
+                                                                           </svg>
+                                                                      </button>
+                                                                      <h5 id="currentMonth" class="mb-0" style="font-size: 18px; font-weight: 600; color: #212529;">September 2025</h5>
+                                                                      <button id="nextMonth" class="btn btn-sm btn-outline-secondary">
+                                                                           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M8.59 16.59L10 18L16 12L10 6L8.59 7.41L13.17 12L8.59 16.59Z" fill="currentColor"/>
+                                                                           </svg>
+                                                                      </button>
+                                                                 </div>
+
+                                                                 <!-- Calendar Grid -->
+                                                                 <div class="calendar-grid">
+                                                                      <!-- Day Headers -->
+                                                                      <div class="row g-0 mb-2">
+                                                                           <div class="col text-center" style="padding: 8px; font-size: 14px; font-weight: 600; color: #6C757D;">Sun</div>
+                                                                           <div class="col text-center" style="padding: 8px; font-size: 14px; font-weight: 600; color: #6C757D;">Mon</div>
+                                                                           <div class="col text-center" style="padding: 8px; font-size: 14px; font-weight: 600; color: #6C757D;">Tue</div>
+                                                                           <div class="col text-center" style="padding: 8px; font-size: 14px; font-weight: 600; color: #6C757D;">Wed</div>
+                                                                           <div class="col text-center" style="padding: 8px; font-size: 14px; font-weight: 600; color: #6C757D;">Thu</div>
+                                                                           <div class="col text-center" style="padding: 8px; font-size: 14px; font-weight: 600; color: #6C757D;">Fri</div>
+                                                                           <div class="col text-center" style="padding: 8px; font-size: 14px; font-weight: 600; color: #6C757D;">Sat</div>
+                                                                      </div>
+
+                                                                      <!-- Calendar Days -->
+                                                                      <div id="calendarDays"></div>
+                                                                 </div>
+
+                                                                 <!-- Booking Legend -->
+                                                                 <div class="d-flex gap-3 mt-4 pt-3 border-top flex-wrap">
+                                                                      <div class="d-flex align-items-center gap-2">
+                                                                           <div style="width: 12px; height: 12px; background: #22C55E; border-radius: 2px;"></div>
+                                                                           <span style="font-size: 13px; color: #6C757D;">Confirmed</span>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-2">
+                                                                           <div style="width: 12px; height: 12px; background: #FFDA44; border-radius: 2px;"></div>
+                                                                           <span style="font-size: 13px; color: #6C757D;">Pending</span>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-2">
+                                                                           <div style="width: 12px; height: 12px; background: #2948FF; border-radius: 2px;"></div>
+                                                                           <span style="font-size: 13px; color: #6C757D;">Available</span>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+
+                                                  <!-- Previous Bookings -->
+                                                  <div>
+                                                       <div class="d-flex align-items-center gap-2 mb-3">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                 <path d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12H4C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C9.25022 4 6.82447 5.38734 5.38451 7.50024L8 7.5V9.5H2V3.5H4L3.99989 5.99918C5.82434 3.57075 8.72873 2 12 2ZM13 7L12.9998 11.585L16.2426 14.8284L14.8284 16.2426L10.9998 12.413L11 7H13Z" fill="#212529"/>
+                                                            </svg>
+                                                            <h5 class="mb-0" style="font-size: 20px; font-weight: 500; color: #212529;">Previous Bookings</h5>
+                                                       </div>
+
+                                                       <div class="card border">
+                                                            <div class="table-responsive">
+                                                                 <table class="table table-hover mb-0">
+                                                                      <thead>
+                                                                           <tr style="border-bottom: 1px solid #EAEDF1;">
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Invoice #</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Customer</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Date & Time</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Price</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Status</th>
+                                                                                <th class="text-muted fw-normal" style="padding: 16px 20px; font-size: 14px;">Actions</th>
+                                                                           </tr>
+                                                                      </thead>
+                                                                      <tbody>
+                                                                           <tr style="border-bottom: 1px solid #EAEDF1;">
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">INV-2033</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Daniel Smith</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Sept 5, 2025</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">$800</td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <span class="badge" style="padding: 4px 8px; font-size: 13px; font-weight: 600; background: #E5383B; color: #FFF;">Cancelled</span>
+                                                                                </td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View Details</a>
+                                                                                </td>
+                                                                           </tr>
+                                                                           <tr style="border-bottom: 1px solid #EAEDF1;">
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">INV-2028</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Sarah Miller</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Sept 2, 2025</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">$450</td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <span class="badge bg-success" style="padding: 4px 8px; font-size: 13px; font-weight: 600;">Completed</span>
+                                                                                </td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View Details</a>
+                                                                                </td>
+                                                                           </tr>
+                                                                           <tr>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">INV-2022</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Robert Davis</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">Aug 29, 2025</td>
+                                                                                <td class="fw-medium" style="padding: 16px 20px; font-size: 16px; color: #212529;">$600</td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <span class="badge bg-success" style="padding: 4px 8px; font-size: 13px; font-weight: 600;">Completed</span>
+                                                                                </td>
+                                                                                <td style="padding: 16px 20px;">
+                                                                                     <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View Details</a>
+                                                                                </td>
+                                                                           </tr>
+                                                                      </tbody>
+                                                                 </table>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+
+                                             <!-- Maintenance Tab -->
+                                             <div class="tab-pane fade" id="maintenance" role="tabpanel" aria-labelledby="maintenance-tab">
+
+                                                  <!-- Maintenance Records -->
+                                                  <div class="mb-4">
+                                                       <div class="d-flex align-items-center gap-2 mb-3">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                 <path d="M5.32894 3.27158C6.56203 2.8332 7.99181 3.10749 8.97878 4.09446C10.0997 5.21537 10.3014 6.90741 9.58381 8.23385L20.2925 18.9437L18.8783 20.3579L8.16933 9.64875C6.84276 10.3669 5.1502 10.1654 4.02903 9.04421C3.04178 8.05696 2.76761 6.62665 3.20652 5.39332L5.44324 7.63C6.02903 8.21578 6.97878 8.21578 7.56456 7.63C8.15035 7.04421 8.15035 6.09446 7.56456 5.50868L5.32894 3.27158ZM15.6963 5.15512L18.8783 3.38736L20.2925 4.80157L18.5247 7.98355L16.7569 8.3371L14.6356 10.4584L13.2214 9.04421L15.3427 6.92289L15.6963 5.15512ZM8.97878 13.2868L10.393 14.7011L5.08969 20.0044C4.69917 20.3949 4.066 20.3949 3.67548 20.0044C3.31285 19.6417 3.28695 19.0699 3.59777 18.6774L3.67548 18.5902L8.97878 13.2868Z" fill="#212529"/>
+                                                            </svg>
+                                                            <h5 class="mb-0" style="font-size: 20px; font-weight: 500; color: #212529;">Maintenance Records</h5>
+                                                       </div>
+
+                                                       <div class="card border">
+                                                            <div class="card-body p-4">
+
+                                                                 <!-- Maintenance Record 1 -->
+                                                                 <div class="d-flex justify-content-between align-items-center mb-4 pb-4 border-bottom">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">Engine Service</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">Jan 5, 2024 • $850</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <span class="badge bg-success" style="padding: 4px 8px; font-size: 13px; font-weight: 600;">Completed</span>
+                                                                           <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View Details</a>
+                                                                      </div>
+                                                                 </div>
+
+                                                                 <!-- Maintenance Record 2 -->
+                                                                 <div class="d-flex justify-content-between align-items-center mb-4 pb-4 border-bottom">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">Engine Service</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">Jan 5, 2024 • $850</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <span class="badge bg-success" style="padding: 4px 8px; font-size: 13px; font-weight: 600;">Completed</span>
+                                                                           <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View Details</a>
+                                                                      </div>
+                                                                 </div>
+
+                                                                 <!-- Maintenance Record 3 -->
+                                                                 <div class="d-flex justify-content-between align-items-center">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">Engine Service</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">Jan 5, 2024 • $850</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <span class="badge bg-success" style="padding: 4px 8px; font-size: 13px; font-weight: 600;">Completed</span>
+                                                                           <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View Details</a>
+                                                                      </div>
+                                                                 </div>
+
+                                                            </div>
+                                                       </div>
+
+                                                       <!-- Action Buttons -->
+                                                       <div class="d-flex justify-content-center gap-3 mt-4">
+                                                            <button class="btn btn-primary" style="padding: 16px; font-size: 16px; font-weight: 500;">
+                                                                 Add New Record
+                                                            </button>
+                                                            <button class="btn btn-outline-primary" style="padding: 16px; font-size: 16px; font-weight: 500;">
+                                                                 Schedule Service
+                                                            </button>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+
+                                             <!-- Assets Tab -->
+                                             <div class="tab-pane fade" id="assets" role="tabpanel" aria-labelledby="assets-tab">
+
+                                                  <!-- Onboard Assets -->
+                                                  <div class="mb-4">
+                                                       <div class="d-flex align-items-center gap-2 mb-3">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                 <path d="M12 1L21.5 6.5V17.5L12 23L2.5 17.5V6.5L12 1ZM5.49388 7.0777L12.0001 10.8444L18.5062 7.07774L12 3.311L5.49388 7.0777ZM4.5 8.81329V16.3469L11.0001 20.1101V12.5765L4.5 8.81329ZM13.0001 20.11L19.5 16.3469V8.81337L13.0001 12.5765V20.11Z" fill="#212529"/>
+                                                            </svg>
+                                                            <h5 class="mb-0" style="font-size: 20px; font-weight: 500; color: #212529;">Onboard Assets</h5>
+                                                       </div>
+
+                                                       <div class="card border">
+                                                            <div class="card-body p-4">
+
+                                                                 <!-- Asset 1 -->
+                                                                 <div class="d-flex justify-content-between align-items-center mb-4 pb-4 border-bottom">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">Life Jackets</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">Quantity: 12</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <span class="badge bg-success" style="padding: 4px 8px; font-size: 13px; font-weight: 600;">Good</span>
+                                                                      </div>
+                                                                 </div>
+
+                                                                 <!-- Asset 2 -->
+                                                                 <div class="d-flex justify-content-between align-items-center mb-4 pb-4 border-bottom">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">GPS System</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">Quantity: 1</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <span class="badge bg-success" style="padding: 4px 8px; font-size: 13px; font-weight: 600;">Good</span>
+                                                                      </div>
+                                                                 </div>
+
+                                                                 <!-- Asset 3 -->
+                                                                 <div class="d-flex justify-content-between align-items-center mb-4 pb-4 border-bottom">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">Music System</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">Quantity: 1</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <span class="badge" style="padding: 4px 8px; font-size: 13px; font-weight: 600; background: #F9DC5C; color: #FFF;">Needs Repair</span>
+                                                                      </div>
+                                                                 </div>
+
+                                                                 <!-- Asset 4 -->
+                                                                 <div class="d-flex justify-content-between align-items-center">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">Fishing Gear</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">Quantity: 8</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <span class="badge bg-success" style="padding: 4px 8px; font-size: 13px; font-weight: 600;">Good</span>
+                                                                      </div>
+                                                                 </div>
+
+                                                            </div>
+                                                       </div>
+
+                                                       <!-- Add New Asset Button -->
+                                                       <div class="d-flex justify-content-center mt-4">
+                                                            <button class="btn btn-primary" style="padding: 16px; font-size: 16px; font-weight: 500;">
+                                                                 Add New Asset
+                                                            </button>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+
+                                             <!-- Documents Tab -->
+                                             <div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">
+
+                                                  <!-- Documents Section -->
+                                                  <div class="mb-4">
+                                                       <div class="d-flex align-items-center gap-2 mb-3">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                 <path d="M20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22ZM19 20V4H5V20H19ZM8 7H16V9H8V7ZM8 11H16V13H8V11ZM8 15H13V17H8V15Z" fill="#212529"/>
+                                                            </svg>
+                                                            <h5 class="mb-0" style="font-size: 20px; font-weight: 500; color: #212529;">Documents</h5>
+                                                       </div>
+
+                                                       <div class="card border">
+                                                            <div class="card-body p-4">
+
+                                                                 <!-- Document 1 -->
+                                                                 <div class="d-flex justify-content-between align-items-center mb-4 pb-4 border-bottom">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">Registration Certificate</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">PDF • Valid until 2025</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View</a>
+                                                                      </div>
+                                                                 </div>
+
+                                                                 <!-- Document 2 -->
+                                                                 <div class="d-flex justify-content-between align-items-center mb-4 pb-4 border-bottom">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">Safety Inspection</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">PDF • Valid until 2024</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View</a>
+                                                                      </div>
+                                                                 </div>
+
+                                                                 <!-- Document 3 -->
+                                                                 <div class="d-flex justify-content-between align-items-center">
+                                                                      <div>
+                                                                           <div class="fw-medium mb-2" style="font-size: 16px; color: #212529;">Insurance Policy</div>
+                                                                           <div class="text-muted" style="font-size: 14px;">PDF • Valid until 2024</div>
+                                                                      </div>
+                                                                      <div class="d-flex align-items-center gap-3">
+                                                                           <a href="#" class="text-primary" style="font-size: 14px; font-weight: 500; text-decoration: none;">View</a>
+                                                                      </div>
+                                                                 </div>
+
+                                                            </div>
+                                                       </div>
+
+                                                       <!-- Add Document Button -->
+                                                       <div class="d-flex justify-content-center mt-4">
+                                                            <button class="btn btn-primary" style="padding: 16px; font-size: 16px; font-weight: 500;">
+                                                                 Add Document
+                                                            </button>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+
+                                             <!-- Pricing Tab -->
+                                             <div class="tab-pane fade" id="pricing" role="tabpanel" aria-labelledby="pricing-tab">
+
+                                                  <div class="row g-4">
+                                                       <!-- Pricing Configuration -->
+                                                       <div class="col-lg-6">
+                                                            <div class="d-flex align-items-center gap-2 mb-3">
+                                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M12.0039 22.0026C6.48107 22.0026 2.00391 17.5255 2.00391 12.0026C2.00391 6.47984 6.48107 2.00269 12.0039 2.00269C17.5267 2.00269 22.0039 6.47984 22.0039 12.0026C22.0039 17.5255 17.5267 22.0026 12.0039 22.0026ZM12.0039 20.0026C16.4222 20.0026 20.0039 16.4209 20.0039 12.0026C20.0039 7.58441 16.4222 4.00269 12.0039 4.00269C7.58563 4.00269 4.00391 7.58441 4.00391 12.0026C4.00391 16.4209 7.58563 20.0026 12.0039 20.0026ZM8.50391 14.0026H14.0039C14.28 14.0026 14.5039 13.7788 14.5039 13.5026C14.5039 13.2265 14.28 13.0026 14.0039 13.0026H10.0039C8.6232 13.0026 7.50391 11.8834 7.50391 10.5026C7.50391 9.12197 8.6232 8.00269 10.0039 8.00269H11.0039V6.00269H13.0039V8.00269H15.5039V10.0026H10.0039C9.72777 10.0026 9.50391 10.2265 9.50391 10.5026C9.50391 10.7788 9.72777 11.0026 10.0039 11.0026H14.0039C15.3846 11.0026 16.5039 12.1219 16.5039 13.5026C16.5039 14.8834 15.3846 16.0026 14.0039 16.0026H13.0039V18.0026H11.0039V16.0026H8.50391V14.0026Z" fill="#212529"/>
+                                                                 </svg>
+                                                                 <h5 class="mb-0" style="font-size: 20px; font-weight: 500; color: #212529;">Pricing Configuration</h5>
+                                                            </div>
+
+                                                            <div class="card border">
+                                                                 <div class="card-body p-4">
+                                                                      <h6 class="mb-4" style="font-size: 16px; font-weight: 500; color: #212529;">Standard Rates</h6>
+
+                                                                      <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                           <div style="font-size: 16px; font-weight: 500; color: #212529;">Hourly Rate:</div>
+                                                                           <div style="font-size: 16px; font-weight: 500; color: #212529;">$250</div>
+                                                                      </div>
+
+                                                                      <div class="d-flex justify-content-between align-items-center">
+                                                                           <div style="font-size: 16px; font-weight: 500; color: #212529;">Daily Rate:</div>
+                                                                           <div style="font-size: 16px; font-weight: 500; color: #212529;">$1800</div>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+
+                                                  <!-- Statistics Row -->
+                                                  <div class="row g-4 mt-1">
+                                                       <!-- Earnings Card -->
+                                                       <div class="col-lg-4">
+                                                            <div class="card border">
+                                                                 <div class="card-body p-4">
+                                                                      <div class="d-flex align-items-start gap-3 mb-4">
+                                                                           <div class="d-flex align-items-center justify-content-center" style="width: 34px; height: 34px; background: #2948FF; border-radius: 5.6px;">
+                                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                     <path d="M20.0039 6.99976V4.99976H4.00391V18.9998H20.0039V16.9998H12.0039C11.4516 16.9998 11.0039 16.5521 11.0039 15.9998V7.99976C11.0039 7.44747 11.4516 6.99976 12.0039 6.99976H20.0039ZM3.00391 2.99976H21.0039C21.5562 2.99976 22.0039 3.44747 22.0039 3.99976V19.9998C22.0039 20.5521 21.5562 20.9998 21.0039 20.9998H3.00391C2.45163 20.9998 2.00391 20.5521 2.00391 19.9998V3.99976C2.00391 3.44747 2.45163 2.99976 3.00391 2.99976ZM13.0039 8.99976V14.9998H20.0039V8.99976H13.0039ZM15.0039 10.9998H18.0039V12.9998H15.0039V10.9998Z" fill="white"/>
+                                                                                </svg>
+                                                                           </div>
+                                                                      </div>
+                                                                      <div class="d-flex justify-content-between align-items-end">
+                                                                           <div>
+                                                                                <div class="text-muted mb-1" style="font-size: 15px; font-weight: 500;">Earnings</div>
+                                                                                <div style="font-size: 16px; font-weight: 600; color: #212529;">$15,000 (30%)</div>
+                                                                           </div>
+                                                                           <div>
+                                                                                <svg width="90" height="91" viewBox="0 0 90 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                     <path d="M44.9992 18.1707C52.1146 18.1707 58.9385 20.9971 63.9699 26.0284C69.0014 31.0596 71.8282 37.8834 71.8285 44.9988C71.8288 52.1141 69.0026 58.9382 63.9716 63.9698C58.9406 69.0015 52.1169 71.8286 45.0015 71.8292C37.8862 71.8298 31.062 69.0039 26.0301 63.9732C20.9982 58.9424 18.1709 52.1188 18.1699 45.0034C18.169 37.8881 20.9946 31.0638 26.0251 26.0317C31.0557 20.9996 37.8791 18.1719 44.9945 18.1707" stroke="#EEF2F7" stroke-width="10.4098" stroke-linecap="round"/>
+                                                                                     <path d="M45 18.1707C50.6658 18.1707 56.1861 19.9643 60.7698 23.2946C65.3536 26.6249 68.7653 31.3207 70.5162 36.7092C72.267 42.0977 72.267 47.9021 70.5162 53.2906C68.7653 58.6791 65.3536 63.375 60.7698 66.7053" stroke="#2BA84A" stroke-width="10.7317" stroke-linecap="round"/>
+                                                                                </svg>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+
+                                                       <!-- Usage Card -->
+                                                       <div class="col-lg-4">
+                                                            <div class="card border">
+                                                                 <div class="card-body p-4">
+                                                                      <div class="d-flex align-items-start gap-3 mb-4">
+                                                                           <div class="d-flex align-items-center justify-content-center" style="width: 34px; height: 34px; background: #2948FF; border-radius: 5.6px;">
+                                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                     <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z" fill="white"/>
+                                                                                </svg>
+                                                                           </div>
+                                                                      </div>
+                                                                      <div class="d-flex justify-content-between align-items-end">
+                                                                           <div>
+                                                                                <div class="text-muted mb-1" style="font-size: 15px; font-weight: 500;">Usage (Hours)</div>
+                                                                                <div style="font-size: 16px; font-weight: 600; color: #212529; line-height: 1.875;">Booked Hours: 140 hrs (65%)<br>Idle Hours: 75 hrs (35%)</div>
+                                                                           </div>
+                                                                           <div>
+                                                                                <svg width="90" height="91" viewBox="0 0 90 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                     <path d="M44.9992 18.1707C52.1146 18.1707 58.9385 20.9971 63.9699 26.0284C69.0014 31.0596 71.8282 37.8834 71.8285 44.9988C71.8288 52.1141 69.0026 58.9382 63.9716 63.9698C58.9406 69.0015 52.1169 71.8286 45.0015 71.8292C37.8862 71.8298 31.062 69.0039 26.0301 63.9732C20.9982 58.9424 18.1709 52.1188 18.1699 45.0034C18.169 37.8881 20.9946 31.0638 26.0251 26.0317C31.0557 20.9996 37.8791 18.1719 44.9945 18.1707" stroke="#EEF2F7" stroke-width="10.4098" stroke-linecap="round"/>
+                                                                                     <path d="M45 18.1707C50.6658 18.1707 56.1861 19.9643 60.7698 23.2946C65.3536 26.6249 68.7653 31.3207 70.5162 36.7092C72.267 42.0977 72.267 47.9021 70.5162 53.2906C68.7653 58.6791 65.3536 63.375 60.7698 66.7053" stroke="#2BA84A" stroke-width="10.7317" stroke-linecap="round"/>
+                                                                                </svg>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+
+                                                  <!-- Update Pricing Button -->
+                                                  <div class="d-flex justify-content-center mt-4">
+                                                       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pricingModal" style="padding: 16px; font-size: 16px; font-weight: 500;">
+                                                            Update Pricing Rules
+                                                       </button>
+                                                  </div>
+
+                                             </div>
+
+                                        </div>
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+
+          @@include("partials/footer.html")
+     </div>
+
+     <!-- Pricing Update Modal -->
+     <div class="modal fade" id="pricingModal" tabindex="-1" aria-labelledby="pricingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content">
+                    <div class="modal-header border-0 pb-0">
+                         <div>
+                              <h4 class="modal-title mb-1" id="pricingModalLabel" style="font-size: 24px; font-weight: 600; color: #212529;">Pricing</h4>
+                              <p class="text-muted mb-0" style="font-size: 14px;">Set rental rates for this boat</p>
+                         </div>
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-4 pb-4">
+                         <form id="pricingForm">
+                              <div class="row g-3">
+                                   <div class="col-md-6">
+                                        <label for="hourlyRate" class="form-label" style="font-size: 14px; font-weight: 500; color: #212529;">Hourly Rate ($) <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="hourlyRate" value="250" placeholder="250" required style="padding: 12px; font-size: 14px; border: 1px solid #E5E7EB; border-radius: 6px;">
+                                   </div>
+                                   <div class="col-md-6">
+                                        <label for="dailyRate" class="form-label" style="font-size: 14px; font-weight: 500; color: #212529;">Daily Rate ($) <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="dailyRate" value="1800" placeholder="1800" required style="padding: 12px; font-size: 14px; border: 1px solid #E5E7EB; border-radius: 6px;">
+                                   </div>
+                                   <div class="col-12">
+                                        <label for="pricingDescription" class="form-label" style="font-size: 14px; font-weight: 500; color: #212529;">Description</label>
+                                        <textarea class="form-control" id="pricingDescription" rows="4" placeholder="Describe the boat's features, amenities, and any special notes..." style="padding: 12px; font-size: 14px; border: 1px solid #E5E7EB; border-radius: 6px; resize: vertical;"></textarea>
+                                   </div>
+                              </div>
+                              <div class="d-flex gap-2 mt-4">
+                                   <button type="button" class="btn btn-secondary flex-fill" data-bs-dismiss="modal" style="padding: 12px; font-size: 15px; font-weight: 500;">Cancel</button>
+                                   <button type="submit" class="btn btn-primary flex-fill" style="padding: 12px; font-size: 15px; font-weight: 500;">Save Changes</button>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     @@include("partials/vendor-scripts.html")
+
+     <style>
+          /* Pricing Modal Styles */
+          #pricingModal .form-control {
+               transition: border-color 0.2s, box-shadow 0.2s;
+          }
+
+          #pricingModal .form-control:focus {
+               border-color: #2948FF;
+               box-shadow: 0 0 0 3px rgba(41, 72, 255, 0.1);
+          }
+
+          #pricingModal .modal-content {
+               border: none;
+               border-radius: 12px;
+               box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+          }
+
+          #pricingModal .form-label {
+               margin-bottom: 8px;
+          }
+
+          /* Calendar Responsive Styles */
+          .calendar-day {
+               position: relative;
+          }
+
+          @media (max-width: 768px) {
+               .calendar-grid .col {
+                    flex: 0 0 14.28%;
+                    max-width: 14.28%;
+               }
+
+               .calendar-day {
+                    min-height: 60px !important;
+                    padding: 8px !important;
+               }
+
+               .calendar-day div:first-child {
+                    font-size: 12px !important;
+               }
+
+               .calendar-day div:last-child {
+                    font-size: 9px !important;
+                    padding: 1px 4px !important;
+               }
+
+               #currentMonth {
+                    font-size: 16px !important;
+               }
+
+               .calendar-grid .row.g-0.mb-2 {
+                    margin-bottom: 4px !important;
+               }
+          }
+
+          @media (max-width: 576px) {
+               .calendar-day {
+                    min-height: 50px !important;
+                    padding: 6px !important;
+               }
+
+               .calendar-day div:first-child {
+                    font-size: 11px !important;
+               }
+
+               .calendar-day div:last-child {
+                    font-size: 8px !important;
+                    padding: 1px 3px !important;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+               }
+
+               #prevMonth svg, #nextMonth svg {
+                    width: 16px !important;
+                    height: 16px !important;
+               }
+          }
+
+          /* Calendar hover effects */
+          .calendar-day:not(.empty):hover {
+               cursor: pointer;
+               transform: translateY(-2px);
+               box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          }
+
+          .calendar-day.empty {
+               background: transparent !important;
+               border: none !important;
+               cursor: default;
+          }
+     </style>
+
+     <script>
+          // Add active indicator styling to tabs
+          document.addEventListener('DOMContentLoaded', function() {
+               const tabs = document.querySelectorAll('#boatDetailsTabs button[data-bs-toggle="tab"]');
+               
+               tabs.forEach(tab => {
+                    tab.addEventListener('shown.bs.tab', function (e) {
+                         // Remove active indicator from all tabs
+                         tabs.forEach(t => {
+                              const indicator = t.querySelector('.position-absolute.bottom-0');
+                              if (indicator) {
+                                   indicator.remove();
+                              }
+                         });
+                         
+                         // Add active indicator to current tab
+                         if (!tab.querySelector('.position-absolute.bottom-0')) {
+                              const indicator = document.createElement('span');
+                              indicator.className = 'position-absolute bottom-0 start-0 end-0';
+                              indicator.style.height = '2px';
+                              indicator.style.background = '#2948FF';
+                              tab.appendChild(indicator);
+                         }
+                    });
+               });
+
+               // Calendar View Toggle
+               const listViewBtn = document.getElementById('listViewBtn');
+               const calendarViewBtn = document.getElementById('calendarViewBtn');
+               const listViewContainer = document.getElementById('listViewContainer');
+               const calendarViewContainer = document.getElementById('calendarViewContainer');
+
+               if (listViewBtn && calendarViewBtn) {
+                    listViewBtn.addEventListener('click', function() {
+                         listViewContainer.style.display = 'block';
+                         calendarViewContainer.style.display = 'none';
+                         listViewBtn.classList.remove('btn-outline-secondary');
+                         listViewBtn.classList.add('btn-primary');
+                         calendarViewBtn.classList.remove('btn-primary');
+                         calendarViewBtn.classList.add('btn-outline-secondary');
+                    });
+
+                    calendarViewBtn.addEventListener('click', function() {
+                         listViewContainer.style.display = 'none';
+                         calendarViewContainer.style.display = 'block';
+                         calendarViewBtn.classList.remove('btn-outline-secondary');
+                         calendarViewBtn.classList.add('btn-primary');
+                         listViewBtn.classList.remove('btn-primary');
+                         listViewBtn.classList.add('btn-outline-secondary');
+                         renderCalendar();
+                    });
+               }
+
+               // Calendar functionality
+               let currentDate = new Date(2025, 8, 1); // September 2025
+
+               // Sample booking data
+               const bookings = [
+                    { date: 20, status: 'confirmed', customer: 'Michael Johnson', price: '$1,200' },
+                    { date: 25, status: 'pending', customer: 'Emily Carter', price: '$450' }
+               ];
+
+               function renderCalendar() {
+                    const year = currentDate.getFullYear();
+                    const month = currentDate.getMonth();
+
+                    // Update month display
+                    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                                      'July', 'August', 'September', 'October', 'November', 'December'];
+                    document.getElementById('currentMonth').textContent = monthNames[month] + ' ' + year;
+
+                    // Get first day of month and number of days
+                    const firstDay = new Date(year, month, 1).getDay();
+                    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                    // Create calendar grid
+                    let calendarHTML = '';
+                    let dayCounter = 1;
+
+                    // Calculate number of rows needed
+                    const totalCells = Math.ceil((firstDay + daysInMonth) / 7) * 7;
+
+                    for (let i = 0; i < totalCells; i++) {
+                         if (i % 7 === 0) {
+                              calendarHTML += '<div class=\"row g-0 mb-2\">';
+                         }
+
+                         if (i < firstDay || dayCounter > daysInMonth) {
+                              calendarHTML += '<div class=\"col\"><div class=\"calendar-day empty\"></div></div>';
+                         } else {
+                              const booking = bookings.find(b => b.date === dayCounter);
+                              let dayClass = 'calendar-day';
+                              let bookingIndicator = '';
+                              let dayStyle = 'padding: 12px; min-height: 80px; border: 1px solid #EAEDF1; border-radius: 4px; cursor: pointer; transition: all 0.2s;';
+
+                              if (booking) {
+                                   if (booking.status === 'confirmed') {
+                                        dayStyle += ' background: rgba(34, 197, 94, 0.1); border-color: #22C55E;';
+                                        bookingIndicator = '<div style=\"margin-top: 4px; padding: 2px 6px; background: #22C55E; color: white; font-size: 11px; border-radius: 3px; font-weight: 500;\">Confirmed</div>';
+                                   } else if (booking.status === 'pending') {
+                                        dayStyle += ' background: rgba(255, 218, 68, 0.1); border-color: #FFDA44;';
+                                        bookingIndicator = '<div style=\"margin-top: 4px; padding: 2px 6px; background: #FFDA44; color: white; font-size: 11px; border-radius: 3px; font-weight: 500;\">Pending</div>';
+                                   }
+                              } else {
+                                   dayStyle += ' background: rgba(41, 72, 255, 0.03);';
+                              }
+
+                              const today = new Date();
+                              const isToday = dayCounter === today.getDate() && month === today.getMonth() && year === today.getFullYear();
+                              const dayNumberStyle = isToday ? 'font-weight: 700; color: #2948FF;' : 'font-weight: 500; color: #212529;';
+
+                              calendarHTML += `
+                                   <div class=\"col\">
+                                        <div class=\"${dayClass}\" style=\"${dayStyle}\" onmouseover=\"this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)';\" onmouseout=\"this.style.transform='translateY(0)'; this.style.boxShadow='none';\">
+                                             <div style=\"${dayNumberStyle} font-size: 14px;\">${dayCounter}</div>
+                                             ${bookingIndicator}
+                                        </div>
+                                   </div>
+                              `;
+                              dayCounter++;
+                         }
+
+                         if ((i + 1) % 7 === 0) {
+                              calendarHTML += '</div>';
+                         }
+                    }
+
+                    document.getElementById('calendarDays').innerHTML = calendarHTML;
+               }
+
+               // Month navigation
+               const prevMonthBtn = document.getElementById('prevMonth');
+               const nextMonthBtn = document.getElementById('nextMonth');
+
+               if (prevMonthBtn) {
+                    prevMonthBtn.addEventListener('click', function() {
+                         currentDate.setMonth(currentDate.getMonth() - 1);
+                         renderCalendar();
+                    });
+               }
+
+               if (nextMonthBtn) {
+                    nextMonthBtn.addEventListener('click', function() {
+                         currentDate.setMonth(currentDate.getMonth() + 1);
+                         renderCalendar();
+                    });
+               }
+
+               // Pricing Form Handler
+               const pricingForm = document.getElementById('pricingForm');
+               if (pricingForm) {
+                    pricingForm.addEventListener('submit', function(e) {
+                         e.preventDefault();
+
+                         const hourlyRate = document.getElementById('hourlyRate').value;
+                         const dailyRate = document.getElementById('dailyRate').value;
+                         const description = document.getElementById('pricingDescription').value;
+
+                         console.log('Pricing Updated:', {
+                              hourlyRate: hourlyRate,
+                              dailyRate: dailyRate,
+                              description: description
+                         });
+
+                         // Close modal
+                         const modal = bootstrap.Modal.getInstance(document.getElementById('pricingModal'));
+                         if (modal) {
+                              modal.hide();
+                         }
+
+                         // Show success message (optional)
+                         alert('Pricing updated successfully!');
+
+                         // Here you would typically send the data to your backend API
+                         // Example: fetch('/api/boats/pricing', { method: 'POST', body: JSON.stringify(data) })
+                    });
+               }
+          });
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     @@include("partials/title-meta.html", {"sub-title": "Fleet Management"})
+     @@include("partials/head-css.html")
+</head>
+
+<body data-menu-color="dark">
+     <div class="wrapper">
+          @@include("partials/main-nav-fleet.html")
+          @@include("partials/topbar.html")
+
+          <div class="page-content" style="background: #F3F4F6;">
+               <div class="container-fluid">
+                    
+                    <!-- Back Button -->
+                    <div class="row mb-3">
+                         <div class="col-12">
+                              <a href="index.html" class="d-inline-flex align-items-center gap-2 text-decoration-none" style="font-size: 20px; font-weight: 600; color: #212529;">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z" fill="#212529"/>
+                                   </svg>
+                                   Fleet Management
+                              </a>
+                         </div>
+                    </div>
+
+                    <!-- Stats Cards -->
+                    <div class="row g-3 mb-3">
+                         <div class="col-md-6 col-xl-3">
+                              <div class="card shadow-sm h-100">
+                                   <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                             <div>
+                                                  <h6 class="fw-semibold mb-2" style="font-size: 16px; color: #212529;">Total Boats</h6>
+                                                  <div class="fs-4 fw-medium" style="color: #212529;">25</div>
+                                             </div>
+                                             <div class="d-flex align-items-center justify-content-center rounded" style="width: 56px; height: 56px; background: rgba(96, 74, 227, 0.10);">
+                                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       <path d="M3.00003 18H21C21.2762 18 21.5 18.2239 21.5 18.5C21.5 18.6082 21.4649 18.7135 21.4 18.8L19.3 21.6C19.1112 21.8518 18.8148 22 18.5 22H5.50003C5.18527 22 4.88888 21.8518 4.70003 21.6L2.60003 18.8C2.43434 18.5791 2.47912 18.2657 2.70003 18.1C2.78658 18.0351 2.89184 18 3.00003 18ZM7.16128 14H13V6.7016L7.16128 14ZM15 2.42543V15C15 15.5523 14.5523 16 14 16H4.04034C3.7642 16 3.54034 15.7762 3.54034 15.5C3.54034 15.3865 3.57898 15.2764 3.64991 15.1877L14.1096 2.11309C14.2821 1.89745 14.5967 1.86249 14.8124 2.035C14.931 2.12989 15 2.27354 15 2.42543Z" fill="#2948FF"/>
+                                                  </svg>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="col-md-6 col-xl-3">
+                              <div class="card shadow-sm h-100">
+                                   <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                             <div>
+                                                  <h6 class="fw-semibold mb-2" style="font-size: 16px; color: #212529;">Available Boats</h6>
+                                                  <div class="fs-4 fw-medium" style="color: #212529;">16</div>
+                                             </div>
+                                             <div class="d-flex align-items-center justify-content-center rounded" style="width: 56px; height: 56px; background: rgba(22, 219, 101, 0.14);">
+                                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       <path d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 8H4V19H20V8ZM15.0355 10.136L16.4497 11.5503L11.5 16.5L7.96447 12.9645L9.37868 11.5503L11.5 13.6716L15.0355 10.136Z" fill="#2BA84A"/>
+                                                  </svg>
+                                             </div>
+                                        </div>
+                                        <p class="text-muted mb-0 mt-3" style="font-size: 15px;">
+                                             <span class="text-success">5%</span> (more boats available than last week)
+                                        </p>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="col-md-6 col-xl-3">
+                              <div class="card shadow-sm h-100">
+                                   <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                             <div>
+                                                  <h6 class="fw-semibold mb-2" style="font-size: 16px; color: #212529;">Under Repair / Maintenance</h6>
+                                                  <div class="fs-4 fw-medium" style="color: #212529;">6</div>
+                                             </div>
+                                             <div class="d-flex align-items-center justify-content-center rounded" style="width: 56px; height: 56px; background: rgba(249, 220, 92, 0.20);">
+                                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       <path d="M5.32943 3.27158C6.56252 2.8332 7.9923 3.10749 8.97927 4.09446C9.96652 5.08171 10.2407 6.51202 9.80178 7.74535L20.6465 18.5902L18.5252 20.7115L7.67936 9.86709C6.44627 10.3055 5.01649 10.0312 4.02952 9.04421C3.04227 8.05696 2.7681 6.62665 3.20701 5.39332L5.44373 7.63C6.02952 8.21578 6.97927 8.21578 7.56505 7.63C8.15084 7.04421 8.15084 6.09446 7.56505 5.50868L5.32943 3.27158ZM15.6968 5.15512L18.8788 3.38736L20.293 4.80157L18.5252 7.98355L16.7574 8.3371L14.6361 10.4584L13.2219 9.04421L15.3432 6.92289L15.6968 5.15512ZM8.62572 12.9333L10.747 15.0546L5.79729 20.0044C5.2115 20.5902 4.26175 20.5902 3.67597 20.0044C3.12464 19.453 3.09221 18.5793 3.57867 17.99L3.67597 17.883L8.62572 12.9333Z" fill="#F9DC5C"/>
+                                                  </svg>
+                                             </div>
+                                        </div>
+                                        <p class="text-muted mb-0 mt-3" style="font-size: 15px;">
+                                             <span class="text-danger">10%</span> (repairs reduced compared to last month)
+                                        </p>
+                                        <a href="#" class="d-inline-flex align-items-center gap-1 mt-1" style="font-size: 14px; color: #2949FE; text-decoration: none;">
+                                             See Details
+                                             <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M9.44173 6.41666L6.30563 3.29L7.13338 2.46166L11.6685 7L7.13338 11.5383L6.30563 10.71L9.44173 7.58333H2.3418V6.41666H9.44173Z" fill="#2949FE"/>
+                                             </svg>
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="col-md-6 col-xl-3">
+                              <div class="card shadow-sm h-100">
+                                   <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                             <div>
+                                                  <h6 class="fw-semibold mb-2" style="font-size: 16px; color: #212529;">Out of Service</h6>
+                                                  <div class="fs-4 fw-medium" style="color: #212529;">3</div>
+                                             </div>
+                                             <div class="d-flex align-items-center justify-content-center rounded" style="width: 56px; height: 56px; background: rgba(211, 97, 53, 0.16);">
+                                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 15V17H13V15H11ZM11 7V13H13V7H11Z" fill="#D36135"/>
+                                                  </svg>
+                                             </div>
+                                        </div>
+                                        <p class="text-muted mb-0 mt-3" style="font-size: 15px;">
+                                             <span class="text-danger">1</span> (one more boat marked inactive)
+                                        </p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- Search and Filters -->
+                    <div class="row">
+                         <div class="col-12">
+                              <div class="card shadow-sm mb-0">
+                                   <div class="card-body">
+                                        <div class="row align-items-center g-3">
+                                             <div class="col-lg-6">
+                                                  <div class="d-flex align-items-center gap-3">
+                                                       <div class="position-relative flex-grow-1" style="max-width: 381px;">
+                                                            <input type="text" class="form-control ps-5" placeholder="Search by boat name" style="border-color: #E8EDF1;">
+                                                            <svg class="position-absolute top-50 translate-middle-y ms-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                 <path d="M13.8749 13.875L16.4999 16.5M5.06236 2.45248C6.55943 1.58858 8.3195 1.29832 10.0147 1.6358C11.7099 1.97327 13.2246 2.91546 14.2767 4.28685C15.3287 5.65823 15.8464 7.3653 15.7333 9.09005C15.6201 10.8148 14.8839 12.4396 13.6617 13.6618C12.4395 14.884 10.8147 15.6203 9.08993 15.7334C7.36518 15.8465 5.65811 15.3288 4.28673 14.2768C2.91534 13.2247 1.97315 11.71 1.63568 10.0148C1.2982 8.31962 1.58845 6.55955 2.45236 5.06248" stroke="#8486A7" stroke-width="1.125" stroke-linecap="round"/>
+                                                            </svg>
+                                                       </div>
+                                                       <span class="fw-medium" style="font-size: 15px; color: #212529;">25 boats</span>
+                                                  </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                  <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+                                                       <button class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-1" style="padding: 8px 16px; font-size: 14px;">
+                                                            Location
+                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                 <path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z" fill="currentColor"/>
+                                                            </svg>
+                                                       </button>
+                                                       <button class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-1" style="padding: 8px 16px; font-size: 14px;">
+                                                            Type
+                                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                 <path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z" fill="currentColor"/>
+                                                            </svg>
+                                                       </button>
+                                                       <button class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-1" style="padding: 8px 16px; font-size: 14px;">
+                                                            <svg width="14" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                 <path d="M12.2313 3.25V4.41667H11.6484L8.73378 8.79167V13.75H5.23627V8.79167L2.32169 4.41667H1.73877V3.25H12.2313ZM3.72069 4.41667L6.40211 8.44167V12.5833H7.56794V8.44167L10.2494 4.41667H3.72069Z" fill="currentColor"/>
+                                                            </svg>
+                                                       </button>
+                                                       <button class="btn btn-light btn-sm" style="padding: 8px 16px; font-size: 14px;">Clear Filters</button>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- Table -->
+                    <div class="row mt-0">
+                         <div class="col-12">
+                              <div class="card shadow-sm">
+                                   <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+                                        <h5 class="mb-0 fw-semibold" style="font-size: 16px;">All Boats</h5>
+                                        <a href="boat-add.html" class="btn btn-success btn-sm d-inline-flex align-items-center gap-1" style="padding: 9px 17px; font-size: 14px;">
+                                             <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M6.42231 6.41665V2.91665H7.58814V6.41665H11.0856V7.58331H7.58814V11.0833H6.42231V7.58331H2.9248V6.41665H6.42231Z" fill="white"/>
+                                             </svg>
+                                             Add New
+                                        </a>
+                                   </div>
+
+                                   <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                             <thead>
+                                                  <tr style="background: #FFF; border-bottom: 1px solid #EAEDF1;">
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">
+                                                            <input type="checkbox" class="form-check-input me-3">
+                                                            Boat Names
+                                                       </th>
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">Serial No.</th>
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">Type</th>
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">Location</th>
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">Capacity</th>
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">Hours Logged</th>
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">Last Service Date</th>
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">Scheduled Service</th>
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">Status</th>
+                                                       <th class="fw-medium text-muted" style="padding: 20px 13px; font-size: 16px;">Action</th>
+                                                  </tr>
+                                             </thead>
+                                             <tbody>
+                                                  <tr style="border-bottom: 1px solid #EAEDF1;">
+                                                       <td class="align-middle" style="padding: 20px 13px;">
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                 <input type="checkbox" class="form-check-input">
+                                                                 <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=100&h=100&fit=crop" alt="Ocean Explorer" class="rounded border" style="width: 56px; height: 56px; object-fit: cover; border-width: 3px !important; border-color: #EEF2F7 !important;">
+                                                                 <span class="fw-medium" style="color: #212529; font-size: 16px;">Ocean Explorer</span>
+                                                            </div>
+                                                       </td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">B001</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">Yacht</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">Miami Marina, FL</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">12</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">420 hrs</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">12-Jul-2025</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">10-Oct-2025</td>
+                                                       <td class="align-middle" style="padding: 20px 13px;">
+                                                            <span class="badge fw-medium" style="padding: 5px 10px; font-size: 16px; background: #DEF3E6; color: #2BA84A;">Active</span>
+                                                       </td>
+                                                       <td class="align-middle" style="padding: 20px 13px;">
+                                                            <a href="boat-detail.html" class="btn btn-sm me-1" style="padding: 7px 11px; border: 1px solid #EEF2F7; background: #EEF2F7;">
+                                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M6.75 3.34504C7.47753 3.1139 8.23663 2.9975 9 3.00004C12.1365 3.00004 14.271 4.87504 15.5438 6.52804C16.1813 7.35754 16.5 7.77079 16.5 9.00004C16.5 10.23 16.1813 10.6433 15.5438 11.472C14.271 13.125 12.1365 15 9 15C5.8635 15 3.729 13.125 2.45625 11.472C1.81875 10.644 1.5 10.2293 1.5 9.00004C1.5 7.77004 1.81875 7.35679 2.45625 6.52804C2.84513 6.02016 3.27806 5.54758 3.75 5.11579" stroke="#212529" stroke-width="1.125" stroke-linecap="round"/>
+                                                                      <path d="M11.25 9C11.25 9.59674 11.0129 10.169 10.591 10.591C10.169 11.0129 9.59674 11.25 9 11.25C8.40326 11.25 7.83097 11.0129 7.40901 10.591C6.98705 10.169 6.75 9.59674 6.75 9C6.75 8.40326 6.98705 7.83097 7.40901 7.40901C7.83097 6.98705 8.40326 6.75 9 6.75C9.59674 6.75 10.169 6.98705 10.591 7.40901C11.0129 7.83097 11.25 8.40326 11.25 9Z" stroke="#212529" stroke-width="1.125"/>
+                                                                 </svg>
+                                                            </a>
+                                                            <button class="btn btn-sm me-1" style="padding: 7px 11px; background: rgba(96, 74, 227, 0.10); border: none;">
+                                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M3 16.5H6M15 16.5H9M13.7527 6.08321L14.3093 5.52821C14.5284 5.30912 14.7022 5.049 14.8209 4.76272C14.9395 4.47645 15.0005 4.16961 15.0006 3.85972C15.0006 3.54984 14.9396 3.24299 14.8211 2.95669C14.7025 2.67038 14.5287 2.41023 14.3096 2.19108C14.0905 1.97194 13.8304 1.7981 13.5441 1.67948C13.2579 1.56086 12.951 1.49979 12.6411 1.49976C12.3313 1.49972 12.0244 1.56072 11.7381 1.67928C11.4518 1.79783 11.1916 1.97162 10.9725 2.19071L10.416 2.74721C10.416 2.74721 10.4858 3.92921 11.5283 4.97171C12.5708 6.01421 13.7527 6.08396 13.7527 6.08396L11.1975 8.63996M10.416 2.74646L5.30325 7.85996C4.95675 8.20646 4.7835 8.37896 4.635 8.57021C4.45909 8.79528 4.30843 9.03899 4.18575 9.29696C4.0815 9.51521 4.00425 9.74771 3.849 10.212L3.19275 12.1815L3.033 12.663C2.99555 12.7751 2.99008 12.8954 3.01719 13.0104C3.04431 13.1254 3.10294 13.2306 3.18651 13.3142C3.27008 13.3978 3.37528 13.4564 3.49031 13.4835C3.60534 13.5106 3.72566 13.5052 3.83775 13.4677L4.3185 13.308M8.64 11.1975C8.2935 11.544 8.121 11.7165 7.92975 11.8657C7.70425 12.0417 7.462 12.1915 7.203 12.315C6.98475 12.4192 6.75225 12.4965 6.288 12.651L4.3185 13.308M4.3185 13.308L3.1935 12.1822" stroke="#2948FF" stroke-width="1.125" stroke-linecap="round"/>
+                                                                 </svg>
+                                                            </button>
+                                                            <button class="btn btn-sm" style="padding: 7px 11px; background: rgba(233, 103, 103, 0.10); border: none;">
+                                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M15.375 4.50001H2.625M6.8775 3.00001C7.03245 2.56086 7.3198 2.18058 7.69995 1.9116C8.0801 1.64262 8.53432 1.49817 9 1.49817C9.46568 1.49817 9.9199 1.64262 10.3001 1.9116C10.6802 2.18058 10.9675 2.56086 11.1225 3.00001M13.7805 11.55C13.6478 13.5405 13.581 14.5358 12.9323 15.1425C12.2835 15.7493 11.286 15.75 9.29025 15.75H8.70975C6.71475 15.75 5.71725 15.75 5.06775 15.1425C4.419 14.5358 4.353 13.5405 4.22025 11.55L3.87525 6.37501M14.1248 6.37501L13.9747 8.62501" stroke="#E96767" stroke-width="1.125" stroke-linecap="round"/>
+                                                                 </svg>
+                                                            </button>
+                                                       </td>
+                                                  </tr>
+                                                  <tr style="border-bottom: 1px solid #EAEDF1;">
+                                                       <td class="align-middle" style="padding: 20px 13px;">
+                                                            <div class="d-flex align-items-center gap-3">
+                                                                 <input type="checkbox" class="form-check-input">
+                                                                 <img src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=100&h=100&fit=crop" alt="Blue Horizon" class="rounded border" style="width: 56px; height: 56px; object-fit: cover; border-width: 3px !important; border-color: #EEF2F7 !important;">
+                                                                 <span class="fw-medium" style="color: #212529; font-size: 16px;">Blue Horizon</span>
+                                                            </div>
+                                                       </td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">B002</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">Speedboat</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">Newport Harbor, CA</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">6</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">120 hrs</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">12-Jul-2025</td>
+                                                       <td class="align-middle text-muted fw-medium" style="padding: 20px 13px; font-size: 16px;">10-Oct-2025</td>
+                                                       <td class="align-middle" style="padding: 20px 13px;">
+                                                            <span class="badge fw-medium" style="padding: 5px 10px; font-size: 16px; background: rgba(249, 220, 92, 0.20); color: #F9B931;">Due Soon</span>
+                                                       </td>
+                                                       <td class="align-middle" style="padding: 20px 13px;">
+                                                            <a href="boat-detail.html" class="btn btn-sm me-1" style="padding: 7px 11px; border: 1px solid #EEF2F7; background: #EEF2F7;">
+                                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M6.75 3.34504C7.47753 3.1139 8.23663 2.9975 9 3.00004C12.1365 3.00004 14.271 4.87504 15.5438 6.52804C16.1813 7.35754 16.5 7.77079 16.5 9.00004C16.5 10.23 16.1813 10.6433 15.5438 11.472C14.271 13.125 12.1365 15 9 15C5.8635 15 3.729 13.125 2.45625 11.472C1.81875 10.644 1.5 10.2293 1.5 9.00004C1.5 7.77004 1.81875 7.35679 2.45625 6.52804C2.84513 6.02016 3.27806 5.54758 3.75 5.11579" stroke="#212529" stroke-width="1.125" stroke-linecap="round"/>
+                                                                      <path d="M11.25 9C11.25 9.59674 11.0129 10.169 10.591 10.591C10.169 11.0129 9.59674 11.25 9 11.25C8.40326 11.25 7.83097 11.0129 7.40901 10.591C6.98705 10.169 6.75 9.59674 6.75 9C6.75 8.40326 6.98705 7.83097 7.40901 7.40901C7.83097 6.98705 8.40326 6.75 9 6.75C9.59674 6.75 10.169 6.98705 10.591 7.40901C11.0129 7.83097 11.25 8.40326 11.25 9Z" stroke="#212529" stroke-width="1.125"/>
+                                                                 </svg>
+                                                            </a>
+                                                            <button class="btn btn-sm me-1" style="padding: 7px 11px; background: rgba(96, 74, 227, 0.10); border: none;">
+                                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M3 16.5H6M15 16.5H9M13.7527 6.08321L14.3093 5.52821C14.5284 5.30912 14.7022 5.049 14.8209 4.76272C14.9395 4.47645 15.0005 4.16961 15.0006 3.85972C15.0006 3.54984 14.9396 3.24299 14.8211 2.95669C14.7025 2.67038 14.5287 2.41023 14.3096 2.19108C14.0905 1.97194 13.8304 1.7981 13.5441 1.67948C13.2579 1.56086 12.951 1.49979 12.6411 1.49976C12.3313 1.49972 12.0244 1.56072 11.7381 1.67928C11.4518 1.79783 11.1916 1.97162 10.9725 2.19071L10.416 2.74721C10.416 2.74721 10.4858 3.92921 11.5283 4.97171C12.5708 6.01421 13.7527 6.08396 13.7527 6.08396L11.1975 8.63996M10.416 2.74646L5.30325 7.85996C4.95675 8.20646 4.7835 8.37896 4.635 8.57021C4.45909 8.79528 4.30843 9.03899 4.18575 9.29696C4.0815 9.51521 4.00425 9.74771 3.849 10.212L3.19275 12.1815L3.033 12.663C2.99555 12.7751 2.99008 12.8954 3.01719 13.0104C3.04431 13.1254 3.10294 13.2306 3.18651 13.3142C3.27008 13.3978 3.37528 13.4564 3.49031 13.4835C3.60534 13.5106 3.72566 13.5052 3.83775 13.4677L4.3185 13.308M8.64 11.1975C8.2935 11.544 8.121 11.7165 7.92975 11.8657C7.70425 12.0417 7.462 12.1915 7.203 12.315C6.98475 12.4192 6.75225 12.4965 6.288 12.651L4.3185 13.308M4.3185 13.308L3.1935 12.1822" stroke="#2948FF" stroke-width="1.125" stroke-linecap="round"/>
+                                                                 </svg>
+                                                            </button>
+                                                            <button class="btn btn-sm" style="padding: 7px 11px; background: rgba(233, 103, 103, 0.10); border: none;">
+                                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                      <path d="M15.375 4.50001H2.625M6.8775 3.00001C7.03245 2.56086 7.3198 2.18058 7.69995 1.9116C8.0801 1.64262 8.53432 1.49817 9 1.49817C9.46568 1.49817 9.9199 1.64262 10.3001 1.9116C10.6802 2.18058 10.9675 2.56086 11.1225 3.00001M13.7805 11.55C13.6478 13.5405 13.581 14.5358 12.9323 15.1425C12.2835 15.7493 11.286 15.75 9.29025 15.75H8.70975C6.71475 15.75 5.71725 15.75 5.06775 15.1425C4.419 14.5358 4.353 13.5405 4.22025 11.55L3.87525 6.37501M14.1248 6.37501L13.9747 8.62501" stroke="#E96767" stroke-width="1.125" stroke-linecap="round"/>
+                                                                 </svg>
+                                                            </button>
+                                                       </td>
+                                                  </tr>
+                                             </tbody>
+                                        </table>
+                                   </div>
+
+                                   <!-- Pagination -->
+                                   <div class="card-footer bg-white border-0">
+                                        <div class="d-flex justify-content-center align-items-center gap-2">
+                                             <button class="btn btn-sm btn-outline-secondary">Previous</button>
+                                             <button class="btn btn-sm btn-primary">1</button>
+                                             <button class="btn btn-sm btn-outline-secondary">2</button>
+                                             <button class="btn btn-sm btn-outline-secondary">3</button>
+                                             <button class="btn btn-sm btn-outline-secondary">Next</button>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+
+          @@include("partials/footer.html")
+     </div>
+
+     @@include("partials/vendor-scripts.html")
+</body>
+
+</html>

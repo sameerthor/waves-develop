@@ -1,0 +1,160 @@
+//
+// booking-details.scss
+//
+
+.booking-detail-item {
+    margin-bottom: 1rem;
+    
+    label {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.booking-timeline {
+    padding: 2rem 1rem;
+    position: relative;
+    
+    @media (min-width: 768px) {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 42px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(to right, 
+                #2BA84A 0%, 
+                #2BA84A 33%, 
+                #E7B008 33%, 
+                #E7B008 66%, 
+                #dee2e6 66%, 
+                #dee2e6 100%);
+            z-index: 0;
+        }
+    }
+    
+    .timeline-item {
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        
+        @media (max-width: 767px) {
+            flex-basis: 50%;
+            margin-bottom: 2rem;
+        }
+    }
+    
+    .timeline-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        
+        i {
+            font-size: 1.25rem;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+        
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.boat-image {
+    background-color: #D9D9D9;
+    flex-shrink: 0;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+// Responsive adjustments for booking cards
+@media (max-width: 991px) {
+    .card .position-absolute.top-0.end-0 {
+        position: relative !important;
+        top: auto !important;
+        end: auto !important;
+        margin-top: 1rem;
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .border-start {
+        border-left: none !important;
+        border-top: 1px solid #dee2e6 !important;
+        padding-top: 1rem !important;
+        margin-top: 1rem !important;
+    }
+}
+
+// Tab improvements
+.card-header-tabs {
+    border-bottom: none;
+    margin-bottom: 0;
+    
+    .nav-link {
+        border: none;
+        border-bottom: 2px solid transparent;
+        background: transparent;
+        color: $text-muted;
+        font-weight: 500;
+        
+        &.active {
+            color: $primary;
+            border-bottom-color: $primary;
+            background: transparent;
+        }
+        
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+// Badge improvements for Gold Plus
+.badge.bg-warning {
+    &.text-white {
+        color: #fff !important;
+    }
+}
+
+// Fuel pricing card improvements
+.bg-light {
+    &.rounded {
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+}
+
+// Action buttons responsive
+@media (max-width: 576px) {
+    .d-flex.flex-wrap.gap-2 {
+        .btn {
+            flex: 1 1 100%;
+        }
+    }
+}
+
+// Timeline responsive improvements
+@media (min-width: 768px) and (max-width: 991px) {
+    .booking-timeline {
+        .timeline-item {
+            h6 {
+                font-size: 0.875rem;
+            }
+            
+            small {
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
